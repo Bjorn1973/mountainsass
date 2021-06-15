@@ -15,6 +15,10 @@ Single-colored icons can be modified like so:
 }
 ========================================== */
 
-.icon-library {
-  width: 1.0625em;
+.icon-chevron-right {
+  width: 0.6787109375em;
+}
+
+.icon-chevron-left {
+  width: 0.75em;
 }
