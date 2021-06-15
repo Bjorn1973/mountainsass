@@ -9,13 +9,18 @@ $hover: #c6b198;
 .background {
   background-image: url("../images/background.jpg");
   min-height: 1026px;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  max-width: 1920px;
+  max-height: 1400px;
+  position: relative;
 }
 .container {
-  width: 1200px;
+  width: 62.5%;
   margin: 0 auto;
-  position: relative;
 }
 header {
   @include flex(row, space-between, center);
@@ -75,8 +80,9 @@ h1 {
 p {
   @include fontP;
   text-align: center;
-  width: 520px;
+  width: 43.33%;
   margin: 0 auto;
+  line-height: 2.4rem;
 }
 button {
   display: block;
@@ -99,8 +105,8 @@ button {
   color: white;
   opacity: 0.5;
   font-size: 7.4rem;
-  top: calc(50% - 17.75rem);
-  left: 0rem;
+  top: calc(50% - 3.7rem);
+  left: 15rem;
   cursor: pointer;
   transition: all 300ms;
   &:hover {
@@ -108,7 +114,7 @@ button {
   }
 }
 .next {
-  right: 0rem;
+  right: 15rem;
   left: auto;
 }
 .bottom {
@@ -164,7 +170,7 @@ footer {
       p {
         color: #b0b0b0;
         font-size: 1.4rem;
-        width: 285px;
+        width: 100%;
         line-height: 26px;
       }
       &::after {
@@ -186,6 +192,205 @@ footer {
         }
         p {
           color: $hover;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1750px) {
+  .container {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .container {
+    width: 75%;
+  }
+  footer {
+    .col {
+      a {
+        p {
+          width: 80%;
+        }
+      }
+    }
+  }
+  header {
+    ul {
+      li:nth-child(7) {
+        margin-right: 50px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1500px) {
+  .container {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1375px) {
+  .container {
+    width: 85%;
+  }
+  header {
+    ul {
+      li:nth-child(7) {
+        margin-right: 35px;
+      }
+    }
+  }
+  footer {
+    .col {
+      a {
+        p {
+          width: 70%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1280px) {
+  header {
+    ul {
+      li:nth-child(7) {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1050px) {
+  header {
+    ul {
+      li a {
+        padding: 15px;
+      }
+      li:nth-child(7) {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 55%;
+  }
+  .container {
+    width: 90%;
+  }
+  header {
+    ul {
+      li a {
+        padding: 10px;
+      }
+      li:nth-child(7) {
+        margin-right: 10px;
+      }
+    }
+  }
+  footer {
+    @include make-col(2, 50px);
+    .col {
+      a {
+        p {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 850px) {
+  header {
+    ul {
+      li a {
+        padding: 8px;
+      }
+      li:nth-child(7) {
+        margin-right: 8px;
+      }
+    }
+  }
+  .prev,
+  .next {
+    left: 7rem;
+  }
+  .next {
+    right: 7rem;
+    left: auto;
+  }
+}
+@media screen and (max-width: 790px) {
+  header {
+    @include flex(column, space-between, center);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    a.logo {
+      padding-bottom: 20px;
+    }
+
+    ul {
+      li:nth-child(1) {
+        margin-left: 100px;
+      }
+      li:nth-child(7) {
+        margin-right: 50px;
+      }
+      li:nth-child(8) a {
+        font-size: 2.5rem;
+        margin-right: 50px;
+      }
+    }
+  }
+  p {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 690px) {
+  html {
+    font-size: 50%;
+  }
+  .prev,
+  .next {
+    left: 3rem;
+  }
+  .next {
+    right: 3rem;
+    left: auto;
+  }
+}
+@media screen and (max-width: 560px) {
+  html {
+    font-size: 45%;
+  }
+  .prev,
+  .next {
+    left: 1rem;
+  }
+  .next {
+    right: 1rem;
+    left: auto;
+  }
+  header {
+    ul {
+      li:nth-child(7) {
+        margin-right: 35px;
+      }
+      li:nth-child(8) a {
+        margin-right: 50px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  header {
+    ul {
+      li a {
+        padding: 5px;
+        margin: 2px;
+        li:nth-child(7) {
+          margin-right: 20px;
+        }
+        li:nth-child(8) a {
+          margin-right: 25px;
         }
       }
     }
