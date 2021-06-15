@@ -15,6 +15,7 @@ $hover: #c6b198;
 .container {
   width: 1200px;
   margin: 0 auto;
+  position: relative;
 }
 header {
   @include flex(row, space-between, center);
@@ -91,6 +92,24 @@ button {
   cursor: pointer;
   text-transform: uppercase;
   margin-top: 50px;
+}
+.prev,
+.next {
+  position: absolute;
+  color: white;
+  opacity: 0.5;
+  font-size: 7.4rem;
+  top: calc(50% - 17.75rem);
+  left: 0rem;
+  cursor: pointer;
+  transition: all 300ms;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+.next {
+  right: 0rem;
+  left: auto;
 }
 .bottom {
   color: white;
